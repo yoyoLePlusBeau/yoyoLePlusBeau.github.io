@@ -3,66 +3,124 @@
   <head>
     <meta charset="UTF-8">
 
-    <title>Memory Game</title>
+    <title>Jeu de mémoire</title>
 
     <link rel="stylesheet" href="./CSS/styles.css">
   </head>
   <body>
+    <dialog id="dialog">
+      <div id="div1">
+        <h1>Projet personnel</h1>
+        <hr>
+        <p><i>Design web gr.2 - Automne 2024</i></p>
+      </div>
+  
+      <div id="div2">
+        <div id="texte">
+          <h2>Réalisé par</h2>
+          <p><i>Yoan Bourassa</i></p>
+          <br>
+          <h2>Inspiration</h2>
+          <a href="https://marina-ferreira.github.io/memory-game/"><i>https://marina-ferreira.github.io/memory-game/</i></a>
+        </div>
+  
+        <img src="./img/megaman.png" alt="" id="megaman">
+      </div>
+  
+      <div id="div3">
+        <button autofocus>Fermer la fenêtre</button>
+        <p onclick="NePlusAfficher()"><i>Ne plus afficher cette fenêtre</i></p>
+      </div>
+    </dialog>
+
     <section class="memory-game">
-      <div class="memory-card" data-framework="aurelia">
-        <img class="front-face" src="../img/aurelia.svg" alt="Aurelia" />
-        <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <div class="memory-card" data-framework="Canada">
+        <img class="front-face" src="./img/Drapeau Canada.png" alt="Canada" />
+        <img class="back-face" src="./img/Point d'interrogation.svg" alt="JS Badge" />
       </div>
-      <div class="memory-card" data-framework="aurelia">
-        <img class="front-face" src="../img/aurelia.svg" alt="Aurelia" />
-        <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
-      </div>
-
-      <div class="memory-card" data-framework="vue">
-        <img class="front-face" src="../img/vue.svg" alt="Vue" />
-        <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
-      </div>
-      <div class="memory-card" data-framework="vue">
-        <img class="front-face" src="../img/vue.svg" alt="Vue" />
-        <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <div class="memory-card" data-framework="Canada">
+        <img class="front-face" src="./img/Drapeau Canada.png" alt="Canada" />
+        <img class="back-face" src="./img/Point d'interrogation.svg" alt="JS Badge" />
       </div>
 
-      <div class="memory-card" data-framework="angular">
-        <img class="front-face" src="../img/angular.svg" alt="Angular" />
-        <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <div class="memory-card" data-framework="France">
+        <img class="front-face" src="./img/Drapeau France.png" alt="France" />
+        <img class="back-face" src="./img/Point d'interrogation.svg" alt="JS Badge" />
       </div>
-      <div class="memory-card" data-framework="angular">
-        <img class="front-face" src="../img/angular.svg" alt="Angular" />
-        <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
-      </div>
-
-      <div class="memory-card" data-framework="ember">
-        <img class="front-face" src="../img/ember.svg" alt="Ember" />
-        <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
-      </div>
-      <div class="memory-card" data-framework="ember">
-        <img class="front-face" src="../img/ember.svg" alt="Ember" />
-        <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <div class="memory-card" data-framework="France">
+        <img class="front-face" src="./img/Drapeau France.png" alt="France" />
+        <img class="back-face" src="./img/Point d'interrogation.svg" alt="JS Badge" />
       </div>
 
-      <div class="memory-card" data-framework="backbone">
-        <img class="front-face" src="../img/backbone.svg" alt="Backbone" />
-        <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <div class="memory-card" data-framework="Japon">
+        <img class="front-face" src="./img/Drapeau Japon.png" alt="Japon" />
+        <img class="back-face" src="./img/Point d'interrogation.svg" alt="JS Badge" />
       </div>
-      <div class="memory-card" data-framework="backbone">
-        <img class="front-face" src="../img/backbone.svg" alt="Backbone" />
-        <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <div class="memory-card" data-framework="Japon">
+        <img class="front-face" src="./img/Drapeau Japon.png" alt="Japon" />
+        <img class="back-face" src="./img/Point d'interrogation.svg" alt="JS Badge" />
       </div>
 
-      <div class="memory-card" data-framework="react">
-        <img class="front-face" src="../img/react.svg" alt="React" />
-        <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <div class="memory-card" data-framework="Allemagne">
+        <img class="front-face" src="./img/Drapeau Allemagne.png" alt="Allemagne" />
+        <img class="back-face" src="./img/Point d'interrogation.svg" alt="JS Badge" />
       </div>
-      <div class="memory-card" data-framework="react">
-        <img class="front-face" src="../img/react.svg" alt="React" />
-        <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <div class="memory-card" data-framework="Allemagne">
+        <img class="front-face" src="./img/Drapeau Allemagne.png" alt="Allemagne" />
+        <img class="back-face" src="./img/Point d'interrogation.svg" alt="JS Badge" />
       </div>
+
+      <div class="memory-card" data-framework="Australie">
+        <img class="front-face" src="./img/Drapeau Australie.png" alt="Australie" />
+        <img class="back-face" src="./img/Point d'interrogation.svg" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="Australie">
+        <img class="front-face" src="./img/Drapeau Australie.png" alt="Australie" />
+        <img class="back-face" src="./img/Point d'interrogation.svg" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="Norvège">
+        <img class="front-face" src="./img/Drapeau Norvège.png" alt="Norvège" />
+        <img class="back-face" src="./img/Point d'interrogation.svg" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="Norvège">
+        <img class="front-face" src="./img/Drapeau Norvège.png" alt="Norvège" />
+        <img class="back-face" src="./img/Point d'interrogation.svg" alt="JS Badge" />
+      </div>
+
+      <!-- <div class="memory-card" data-framework="Hongrie">
+        <img class="front-face" src="./img/Drapeau Hongrie.png" alt="Hongrie" />
+        <img class="back-face" src="./img/Point d'interrogation.svg" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="Hongrie">
+        <img class="front-face" src="./img/Drapeau Hongrie.png" alt="Hongrie" />
+        <img class="back-face" src="./img/Point d'interrogation.svg" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="Norvège">
+        <img class="front-face" src="./img/Drapeau Norvège.png" alt="Norvège" />
+        <img class="back-face" src="./img/Point d'interrogation.svg" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="Norvège">
+        <img class="front-face" src="./img/Drapeau Norvège.png" alt="Norvège" />
+        <img class="back-face" src="./img/Point d'interrogation.svg" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="Tchéquie">
+        <img class="front-face" src="./img/Drapeau Tchéquie.png" alt="Tchéquie" />
+        <img class="back-face" src="./img/Point d'interrogation.svg" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="Tchéquie">
+        <img class="front-face" src="./img/Drapeau Tchéquie.png" alt="Tchéquie" />
+        <img class="back-face" src="./img/Point d'interrogation.svg" alt="JS Badge" />
+      </div> -->
     </section>
+
+    <div id="tableau">
+      <h1 id="essaie">Cartes tournées : 0</h1>
+      <h1 id="temps">Temps : 0s</h1>
+      <h1 id="record">Record : ? cartes tournées en ?s</h1>
+    </div>
 
     <script src="./JS/scripts.js"></script>
   </body>

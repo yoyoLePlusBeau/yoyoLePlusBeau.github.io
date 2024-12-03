@@ -6,8 +6,9 @@
 
 body {
   height: 100vh;
+  width: 100vw;
   display: flex;
-  background: #060AB2;
+  background: url("../img/Carte\ du\ monde.png");
 }
 
 .memory-game {
@@ -16,6 +17,7 @@ body {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   perspective: 1000px;
 }
 
@@ -46,10 +48,98 @@ body {
   padding: 20px;
   position: absolute;
   border-radius: 5px;
-  background: #1C7CCC;
+  background-color: rgb(196, 196, 196);
   backface-visibility: hidden;
+  border: 12px solid black;
 }
 
 .front-face {
   transform: rotateY(180deg);
+}
+
+/* début de mes modifications */
+
+::backdrop {
+  background-image: linear-gradient(
+    45deg,
+    rgba(93, 188, 251, 0.5),
+    rgba(93, 188, 251, 0.5)
+  );
+}
+
+dialog[open] {
+  display: grid;
+  align-items: center;
+  flex-direction: column;
+  grid-template-rows: 100px 1fr 60px;
+  grid-template-areas:
+  "d1"
+  "d2"
+  "d3";
+  align-self: center;
+  justify-self: center;
+  padding: 50px ;
+  border-radius: 50px;
+  box-shadow: 5px 2px 5px black;
+}
+
+#div1 {
+  grid-area: d1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+}
+
+hr {
+  width: 300px;
+  border-color: #1C7CCC;
+}
+
+#div2 {
+  display: flex;
+  flex-direction: row;
+  grid-area: d2;
+}
+
+#div3 {
+  grid-area: d3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#div3 button {
+  width: 250px;
+  height: 40px;
+  background-color:#1C7CCC;
+}
+
+#texte {
+  display: flex;
+  flex-direction: column;
+}
+
+#megaman{
+  width: 200px;
+}
+
+#tableau {
+  background-color: black;
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+}
+
+#essaie {
+  color: white;
+}
+
+#temps {
+  color: white;
+}
+
+#record {
+  color: white;
 }
