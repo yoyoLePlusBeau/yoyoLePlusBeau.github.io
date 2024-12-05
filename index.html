@@ -34,8 +34,11 @@
     </dialog>
 
     <dialog id="finDePartie">
-      <h1>Fin de partie!</h1>
-      <h1>Record : ? cartes tournées en ?s</h1>
+      <div>
+        <h1>Fin de partie!</h1>
+        <h1 id="dialogRecord">Record : ? cartes tournées en ?s</h1>
+      </div>
+      
       <button id="boutonDeFin">Recommencer une partie</button>
     </dialog>
 
@@ -122,11 +125,16 @@
       </div> -->
     </section>
 
-    <div id="tableau">
+    <div>
+      <div id="tableau">
       <h1 id="essaie">Cartes tournées : 0</h1>
       <h1 id="temps">Temps : 0s</h1>
       <h1 id="record">Record : ? cartes tournées en ?s</h1>
+      </div>
+
+      <button id="effacer">Éffacer les données</button>
     </div>
+    
 
     <script src="./JS/scripts.js"></script>
   </body>

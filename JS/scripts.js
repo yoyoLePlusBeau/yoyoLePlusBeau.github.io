@@ -77,12 +77,14 @@ const jeu = document.querySelector("memory-card");
 const nbEssaie = document.getElementById("essaie");
 const nbTemps = document.getElementById("temps");
 const nbRecord = document.getElementById("record");
+const dialogRecord = document.getElementById("dialogRecord")
 
 if (localStorage.getItem("recordEssaie")===null) {
   localStorage.setItem("recordEssaie", 100);
   console.log("100");
+  nbRecord.innerText = ("Record : ? cartes tournées en ?s");
 }
-else {
+else if(localStorage.getItem("recordEssaie") < 100){
   console.log(nbRecord.innerText = ("Record : " + localStorage.getItem("recordEssaie") + " cartes tournées en " + localStorage.getItem("recordTemps") + "s"));
   nbRecord.innerText = ("Record : " + localStorage.getItem("recordEssaie") + " cartes tournées en " + localStorage.getItem("recordTemps") + "s");
 }
@@ -126,16 +128,17 @@ function Commencer() {
 }
 
 
-
+// met le record en mémoire et remplace le texte du record par le nouveau record
 function EcrireRecord() {
   if (trouve == 6) {
-    if (essaie < localStorage.getItem("recordEssaie")) {
+    if (essaie < localStorage.getItem("recordEssaie") || (essaie <= localStorage.getItem("recordEssaie") && temps < localStorage.getItem("recordTemps"))) {
     
     localStorage.setItem("recordEssaie", essaie);
     localStorage.setItem("recordTemps", temps);
-    
-    nbRecord.innerText = ("Record : " + localStorage.getItem("recordEssaie") + " cartes tournées en " + localStorage.getItem("recordTemps") + "s");
     }
+    nbRecord.innerText = ("Record : " + localStorage.getItem("recordEssaie") + " cartes tournées en " + localStorage.getItem("recordTemps") + "s");
+    dialogRecord.innerText = ("Record : " + localStorage.getItem("recordEssaie") + " cartes tournées en " + localStorage.getItem("recordTemps") + "s");
+    DialogDeFin();
   }
 }
 
@@ -148,9 +151,18 @@ function Temps () {
   nbTemps.innerText = ("Temps : " + temps + "s");
 }
 
+// bouton qui efface la mémoire (les records et le "ne plus afficher cette fenêtre")
+const boutonEffacer = document.getElementById("effacer");
+
+boutonEffacer.addEventListener("click", effacer);
+function effacer() {
+  localStorage.clear();
+  window.location.reload();
+}
+
 // dialog de fin
 const dialogFin = document.getElementById("finDePartie");
-const boutonFermeFin = document.getElementById("boutonDeFin")
+const boutonFermeFin = document.getElementById("boutonDeFin");
 
 // affiche le dialogue de fin
 function DialogDeFin () {
@@ -160,4 +172,5 @@ function DialogDeFin () {
 // ferme le dialogue de fin
 boutonFermeFin.addEventListener("click", () => {
   dialogFin.close();
+  window.location.reload();
 });
