@@ -176,10 +176,10 @@ boutonFermeFin.addEventListener("click", () => {
 });
 
 // bouton refresh
-const refresh = document.getElementById("refresh");
+const refresh = document.getElementById("recharger");
 
-refresh.addEventListener("click", Refresh);
+refresh.addEventListener("click", Recharger);
 
-function Refresh() {
+function Recharger() {
   window.location.reload();
 }
