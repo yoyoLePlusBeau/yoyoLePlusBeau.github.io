@@ -174,3 +174,12 @@ boutonFermeFin.addEventListener("click", () => {
   dialogFin.close();
   window.location.reload();
 });
+
+// bouton refresh
+const refresh = document.getElementById("refresh");
+
+refresh.addEventListener("click", Refresh);
+
+function Refresh() {
+  window.location.reload();
+}
