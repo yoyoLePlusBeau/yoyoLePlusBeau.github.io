@@ -164,7 +164,7 @@ hr {
   gap: 10px;
   display: flex;
   justify-content: space-between;
-  animation: 1500ms ease-in 0s entrer; 
+  animation: 1000ms entrer; 
 }
 
 @keyframes entrer {
@@ -180,6 +180,7 @@ hr {
   width: 400px;
   height: 50px;
   border-radius: 10px;
+  border: 6px solid black;
   display: flex;
   justify-self: center;
   justify-content: center;

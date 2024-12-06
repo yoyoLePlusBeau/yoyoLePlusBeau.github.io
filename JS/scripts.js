@@ -79,13 +79,14 @@ const nbTemps = document.getElementById("temps");
 const nbRecord = document.getElementById("record");
 const dialogRecord = document.getElementById("dialogRecord")
 
+// si il n'y a pas de record faire comme si il était à 100 
 if (localStorage.getItem("recordEssaie")===null) {
   localStorage.setItem("recordEssaie", 100);
-  console.log("100");
+
   nbRecord.innerText = ("Record : ? cartes tournées en ?s");
 }
+// s'il y a un record l'écrire à la place des "?"
 else if(localStorage.getItem("recordEssaie") < 100){
-  console.log(nbRecord.innerText = ("Record : " + localStorage.getItem("recordEssaie") + " cartes tournées en " + localStorage.getItem("recordTemps") + "s"));
   nbRecord.innerText = ("Record : " + localStorage.getItem("recordEssaie") + " cartes tournées en " + localStorage.getItem("recordTemps") + "s");
 }
 
@@ -106,7 +107,6 @@ window.onload = function() {
   if (localStorage.getItem("nePlusAfficher") != 'true') {
     dialog.showModal();
   }
-  
 }
 
 // Si on retourne une carte fait commencer le temps et l'affiche.
